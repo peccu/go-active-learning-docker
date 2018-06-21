@@ -28,9 +28,9 @@ RUN set -x; \
 FROM alpine
 RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
-COPY --from=golang /go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web /opt/bin/go-active-learning-web
+COPY --from=golang /go/src/github.com/syou6162/go-active-learning-web /opt/bin/go-active-learning-web
 
 EXPOSE 7777
-CMD ["/opt/bin/go-active-learning-web", "serve"]
+CMD ["/opt/bin/go-active-learning-web/go-active-learning-web", "serve"]
 
 # end
