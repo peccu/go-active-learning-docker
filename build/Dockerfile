@@ -18,5 +18,12 @@ COPY --from=node /go-active-learning-web $GOPATH/src/github.com/syou6162/go-acti
 RUN set -x; \
   go get github.com/jessevdk/go-assets-builder
 RUN set -x; \
-  go get github.com/syou6162/go-active-learning-web
+  go get github.com/syou6162/go-active-learning-web || echo
+RUN set -x; \
+  cd $GOPATH/src/github.com/syou6162/go-active-learning-web \
+  && make deps \
+  && go-assets-builder --package=templates templates dist > lib/assets/templates.go \
+  && go build -v
 
+
+# end
