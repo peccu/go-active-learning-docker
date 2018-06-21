@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  web:
+    build: ./build
+    restart: always
+    ports:
+      # limit access for reverse-proxy
+      # - "127.0.0.1:7777:7777"
+      - "7777:7777"
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 192.100.6.0/24
