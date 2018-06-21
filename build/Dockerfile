@@ -1,7 +1,6 @@
-MAINTAINER peccu <peccul@gmail.com>
-
 # build for nodejs
 FROM node:8 AS node
+MAINTAINER peccu <peccul@gmail.com>
 
 RUN set -x; \
   git clone https://github.com/syou6162/go-active-learning-web
