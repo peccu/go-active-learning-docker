@@ -24,13 +24,7 @@ RUN set -x; \
   && go-assets-builder --package=templates templates dist > lib/assets/templates.go \
   && go build -v
 
-# run binary
-FROM alpine
-RUN mkdir -p /opt/bin
-WORKDIR /opt/bin
-COPY --from=golang /go/src/github.com/syou6162/go-active-learning-web /opt/bin/go-active-learning-web
-
 EXPOSE 7777
-CMD ["/opt/bin/go-active-learning-web/go-active-learning-web", "serve"]
+CMD ["/go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web", "serve"]
 
 # end
