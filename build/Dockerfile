@@ -23,6 +23,11 @@ RUN set -x; \
   cd $GOPATH/src/github.com/syou6162/go-active-learning-web \
   && go-assets-builder --package=templates templates dist > lib/assets/templates.go \
   && go build -v
+RUN set -x; \
+  go get github.com/syou6162/go-active-learning
+RUN set -x; \
+  cd $GOPATH/src/github.com/syou6162/go-active-learning \
+  && go build -v
 
 EXPOSE 7777
 CMD ["/go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web", "serve"]
