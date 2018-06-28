@@ -9,6 +9,7 @@ services:
       - "7777:7777"
     environment:
       - POSTGRES_HOST=psql
+      - REDIS_HOST=redis
   psql:
     build: ./psql
     restart: always
