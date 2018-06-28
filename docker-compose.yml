@@ -7,6 +7,16 @@ services:
       # limit access for reverse-proxy
       # - "127.0.0.1:7777:7777"
       - "7777:7777"
+  psql:
+    build: ./psql
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+volumes:
+  db-data:
 networks:
   default:
     ipam:
