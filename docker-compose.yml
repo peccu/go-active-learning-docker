@@ -16,9 +16,9 @@ services:
       - POSTGRES_USER=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - db-data:/var/lib/postgresql/data/pgdata
+      - psql-data:/var/lib/postgresql/data/pgdata
 volumes:
-  db-data:
+  psql-data:
 networks:
   default:
     ipam:
