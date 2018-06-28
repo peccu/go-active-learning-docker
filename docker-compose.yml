@@ -7,6 +7,8 @@ services:
       # limit access for reverse-proxy
       # - "127.0.0.1:7777:7777"
       - "7777:7777"
+    environment:
+      - POSTGRES_HOST=psql
   psql:
     build: ./psql
     restart: always
