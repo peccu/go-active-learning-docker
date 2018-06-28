@@ -17,8 +17,14 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - psql-data:/var/lib/postgresql/data/pgdata
+  redis:
+    image: redis:4.0
+    restart: always
+    volumes:
+      - redis-data:/data
 volumes:
   psql-data:
+  redis-data:
 networks:
   default:
     ipam:
