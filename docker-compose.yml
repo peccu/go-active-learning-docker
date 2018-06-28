@@ -9,12 +9,16 @@ services:
       - "7777:7777"
     environment:
       - POSTGRES_HOST=psql
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=postgres
       - REDIS_HOST=redis
   psql:
     build: ./psql
     restart: always
     environment:
       - POSTGRES_USER=postgres
+      - POSTGRES_PASS=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - psql-data:/var/lib/postgresql/data/pgdata
