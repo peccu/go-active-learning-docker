@@ -1,3 +1,3 @@
 [submodule "go-active-learning"]
-	path = go-active-learning
+	path = psql/go-active-learning
 	url = https://github.com/syou6162/go-active-learning.git
