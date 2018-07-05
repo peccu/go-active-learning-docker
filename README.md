@@ -5,7 +5,7 @@ Launch [syou6162/go-active-learning-web](https://github.com/syou6162/go-active-l
 ## Instruction
 
 ```
-$ git clone <this repo>
+$ git clone --recursive <this repo>
 $ cd go-active-learning-docker
 $ docker-compose up -d
 ```
