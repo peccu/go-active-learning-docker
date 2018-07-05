@@ -25,6 +25,7 @@ RUN set -x; \
   && go build -v
 RUN set -x; \
   go get github.com/syou6162/go-active-learning
+COPY annotation_cli.go $GOPATH/src/github.com/syou6162/go-active-learning/lib/annotation/annotation_cli.go
 RUN set -x; \
   cd $GOPATH/src/github.com/syou6162/go-active-learning \
   && go build -v
