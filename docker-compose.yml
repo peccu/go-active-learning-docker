@@ -29,6 +29,13 @@ services:
     restart: always
     volumes:
       - redis-data:/data
+  reverse-proxy:
+    image: nginx
+    restart: always
+    ports:
+      - 443:443
+    volumes:
+      - ./ssl-reverse-proxy:/etc/nginx/conf.d
 volumes:
   psql-data:
   redis-data:
