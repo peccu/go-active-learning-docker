@@ -15,6 +15,7 @@ services:
       - DB_PASSWORD=postgres
       - DB_NAME=postgres
       - REDIS_HOST=redis
+    # command: tail -f /dev/null
   psql:
     build: ./psql
     restart: always
