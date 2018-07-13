@@ -1,3 +1,4 @@
+#!/bin/bash
 docker-compose exec web /go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web apply --listname github
 docker-compose exec web /go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web apply --listname slideshare
 docker-compose exec web /go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web apply --listname speakerdeck
