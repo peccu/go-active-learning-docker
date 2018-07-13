@@ -2,3 +2,5 @@
 .#*
 .env
 /go/
+/ssl-reverse-proxy/cert.pem
+/ssl-reverse-proxy/key.pem
