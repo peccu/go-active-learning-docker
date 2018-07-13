@@ -29,7 +29,9 @@ RUN set -x; \
   cd $GOPATH/src/github.com/syou6162/go-active-learning \
   && go build -v
 
+COPY cmd.sh /cmd.sh
+
 EXPOSE 7777
-CMD ["/go/src/github.com/syou6162/go-active-learning-web/go-active-learning-web", "serve"]
+CMD ["/cmd.sh"]
 
 # end
